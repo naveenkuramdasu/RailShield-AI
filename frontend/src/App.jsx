@@ -1,3 +1,6 @@
+import AlertPanel from "./components/AlertPanel";
+import SuccessBanner from "./components/SuccessBanner";
+import Header from "./components/Header";
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
@@ -299,33 +302,7 @@ function App() {
       {/* ==============================================
           HEADER
       ============================================== */}
-      <header className="header">
-
-        <div>
-          <h1>
-            RailShield AI
-          </h1>
-
-          <p>
-            Intelligent Railway Track
-            Threat Detection & Early
-            Warning System
-          </p>
-        </div>
-
-        <div
-          className={
-            connected
-              ? "connection online"
-              : "connection offline"
-          }
-        >
-          {connected
-            ? "● SYSTEM ONLINE"
-            : "● SYSTEM OFFLINE"}
-        </div>
-
-      </header>
+      <Header connected={connected} />
 
       {/* ==============================================
           RUN NEW SIMULATION BUTTON
@@ -351,36 +328,7 @@ function App() {
       {/* ==============================================
           COLLISION PREVENTED SUCCESS BANNER
       ============================================== */}
-      {isStoppedSafely && (
-
-        <section className="success-banner">
-
-          <div className="success-icon">
-            ✓
-          </div>
-
-          <div>
-
-            <span>
-              RAILSHIELD AI SAFETY
-              RESPONSE
-            </span>
-
-            <h2>
-              COLLISION PREVENTED
-            </h2>
-
-            <p>
-              TRAIN STOPPED SAFELY
-              BEFORE TRACK THREAT
-            </p>
-
-          </div>
-
-        </section>
-
-      )}
-
+     {isStoppedSafely && <SuccessBanner />}
       {/* ==============================================
           LIVE SAFETY STATUS
       ============================================== */}

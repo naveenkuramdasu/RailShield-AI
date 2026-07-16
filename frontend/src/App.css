@@ -793,3 +793,53 @@ footer {
     padding: 14px;
   }
 }
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #08131f;
+  border-right: 1px solid rgba(255,255,255,.08);
+  padding: 25px;
+}
+
+.sidebar-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#38bdf8;
+  margin-bottom:40px;
+}
+
+.sidebar-logo h2{
+  font-size:22px;
+}
+
+.sidebar nav{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.sidebar-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:transparent;
+  color:#cbd5e1;
+  cursor:pointer;
+  transition:.3s;
+  font-size:15px;
+}
+
+.sidebar-item:hover{
+  background:#0f172a;
+  color:#38bdf8;
+}
+
+.sidebar-item.active{
+  background:#38bdf8;
+  color:#04111f;
+  font-weight:bold;
+}
